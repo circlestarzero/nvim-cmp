@@ -42,13 +42,16 @@ mapping.preset.insert = function(override)
     ['<Up>'] = {
       i = mapping.select_prev_item({ behavior = types.cmp.SelectBehavior.Select }),
     },
-    ['<C-n>'] = {
+    ['<C-j>'] = {
       i = mapping.select_next_item({ behavior = types.cmp.SelectBehavior.Insert }),
     },
-    ['<C-p>'] = {
+    ['<C-k>'] = {
       i = mapping.select_prev_item({ behavior = types.cmp.SelectBehavior.Insert }),
     },
     ['<C-y>'] = {
+      i = mapping.confirm({ select = false }),
+    },
+    ['<CR>'] = {
       i = mapping.confirm({ select = false }),
     },
     ['<C-e>'] = {
@@ -102,6 +105,9 @@ mapping.preset.cmdline = function(override)
     },
     ['<C-e>'] = {
       c = mapping.close(),
+    },
+    ['<C-y>'] = {
+      c = mapping.confirm({ select = false }),
     },
   })
 end
